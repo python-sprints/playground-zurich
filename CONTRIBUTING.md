@@ -43,6 +43,8 @@ git push origin add-my-name
 * Click `Compare & pull request`
 * Leave a comment
 
+See a [**PR example** here](https://github.com/python-sprints/playground-zurich/pull/2)!
+
 #### 6. Delete branch locally and/or remotely after pull request is merged on GitHub
 * Deleting your local branch from the command line: `git branch -d add-my-name`
 * Additionally if you want to delete your remote branch: `git push origin : add-my-name`
