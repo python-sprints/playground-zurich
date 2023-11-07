@@ -18,8 +18,8 @@ cd playground-zurich
 #  Add the "upstream" to your cloned repository
 git remote add upstream https://github.com/python-sprints/playground-zurich.git
 
-# Add the "origin" to your cloned repository
-git remote add origin https://github.com/account/playground-zurich.git
+# Set the "origin" url to your cloned repository
+git remote set-url origin https://github.com/<your-username>/playground-zurich.git
 ```
 
 #### 4. Work in a new branch of your origin
