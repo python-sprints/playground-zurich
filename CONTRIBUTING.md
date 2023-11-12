@@ -18,8 +18,8 @@ cd playground-zurich
 #  Add the "upstream" to your cloned repository
 git remote add upstream https://github.com/python-sprints/playground-zurich.git
 
-# Add the "origin" to your cloned repository
-git remote add origin https://github.com/account/playground-zurich.git
+# Set the "origin" url to your cloned repository
+git remote set-url origin https://github.com/<your-username>/playground-zurich.git
 ```
 
 #### 4. Work in a new branch of your origin
@@ -42,6 +42,8 @@ git push origin add-my-name
 * Go to the `add-my-name` of your forked `project` on Github
 * Click `Compare & pull request`
 * Leave a comment
+
+See a [**PR example** here](https://github.com/python-sprints/playground-zurich/pull/2)!
 
 #### 6. Delete branch locally and/or remotely after pull request is merged on GitHub
 * Deleting your local branch from the command line: `git branch -d add-my-name`

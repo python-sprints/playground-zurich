@@ -7,6 +7,7 @@ Make your 1st PR by adding your name to the list of participants of the event yo
 ## Events
 
 - [28.03.2023: `scikit-learn` sprint](./events/2023-03-28.md)
+- [07.11.2023: `scikit-learn` sprint](./events/2023-11-07.md)
 
 ## Contributing
 
