@@ -8,7 +8,7 @@ This is a general (short) guide on how to contribute to open-source projects. Pl
 2. [PR conventions](#pr-conventions)
 3. [PR review rules](#pr-review-rules)
 4. [Issue guidelines](#issue-guidelines)
-5. [Best practices](#best-practices)
+5. [Common best practices](#common-best-practices)
 6. [References](#references)
 
 ## How to contribute? Step by step guide
@@ -136,7 +136,7 @@ Discovering an issue is great, here's what you need to do when you discover an i
 * Show the steps to reproduce bug.
 * Add error logs.
 
-## Common Best Practices
+## Common best practices
 
 ### Writing good commits
 
