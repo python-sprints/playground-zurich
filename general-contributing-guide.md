@@ -28,14 +28,14 @@ git clone https://github.com/account/project.git
 cd project
 ```
 
-#### 3. Set up the upstream remote for your local `project
+#### 3. Set up the upstream remote for your local project
 
 ```sh
 # Add the "upstream" to your cloned repository
 # Note: "origin" is already set when you clone your fork
 git remote add upstream https://github.com/<original_author>/<project>.git
 
-# Verify your remotes
+# Verify your remotes are set up correctly
 git remote -v
 ```
 
@@ -94,7 +94,7 @@ git push
 
 ## PR conventions
 
-> ⚠️ Note: these conventions varies from project to project. Please check the contributing guidelines of the project you want to contribute to.
+> ⚠️ Note: these conventions vary from project to project. Please check the contributing guidelines of the project you want to contribute to.
 
 When submitting a PR, please add one of the following prefixes depending on the topic you are addressing:
 
