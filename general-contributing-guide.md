@@ -1,14 +1,15 @@
 
 # General Contributing guidelines
 
-This is a general (short) guide on how to contribute to open-source projects. Please make sure to read the specific contributing guidelines of the project you want to contribute to!
+This is a general (short) guide on how to contribute to open-source projects. Please make sure to **read the specific contributing guidelines of the project** you want to contribute to!
 
 ## Index
-1. [How to contribute? Step by step guide](#how-to-contribute?-step-by-step-guide)
+1. [How to contribute? Step by step guide](#how-to-contribute-step-by-step-guide)
 2. [PR conventions](#pr-conventions)
 3. [PR review rules](#pr-review-rules)
 4. [Issue guidelines](#issue-guidelines)
-5. [References](#references)
+5. [Common best practices](#common-best-practices)
+6. [References](#references)
 
 ## How to contribute? Step by step guide
 
@@ -21,23 +22,27 @@ This is a general (short) guide on how to contribute to open-source projects. Pl
 #### 1. Fork a `project` with your GitHub `account`
 
 #### 2. Clone the `project` to your local environment
+
 ```sh
 git clone https://github.com/account/project.git
 cd project
 ```
 
-#### 3. Set up the origin and upstream of the your local `project`
-```sh
-#  Add the "upstream" to your cloned repository
-git remote add upstream https://github.com/original_author/project.git
+#### 3. Set up the upstream remote for your local project
 
-# Add the "origin" to your cloned repository
-git remote add origin https://github.com/account/project.git
+```sh
+# Add the "upstream" to your cloned repository
+# Note: "origin" is already set when you clone your fork
+git remote add upstream https://github.com/<original_author>/<project>.git
+
+# Verify your remotes are set up correctly
+git remote -v
 ```
 
 #### 4. Work in a new branch of your origin
+
 ```sh
-# 1) Create a new branch (e.g. `my-new-branch` from your origin/main branch
+# 1) Create and switch to a new branch (e.g. `my-new-branch`) from your origin/main branch
 git branch my-new-branch origin/main
 git checkout my-new-branch
 
@@ -45,25 +50,30 @@ git checkout my-new-branch
 
 # 3) Add the modified files and make a commit (e.g. you updated README.md)
 git add README.md
-git commit -m 'added a better description'
+git commit -m "Add better description to README"
 
-# 4) Push to your new-branch
+# 4) Push to your new branch
 git push origin my-new-branch
 ```
 
 #### 5. Make a pull request on GitHub
+
 * Go to the `my-new-branch` of your forked `project` on Github
 * Click `Compare & pull request`
 * Leave a comment
     * If you are solving an issue (e.g. `#17`), add `Closes #17` in the comment, the issue will automatically be closed when the pull request is merged.
 
 #### 6. Delete branch locally and/or remotely after pull request is merged on GitHub
+
 * Deleting your local branch from the command line: `git branch -d my-new-branch`
-* Additionally if you want to delete your remote branch: `git push origin : my-new-branch`
+* Additionally if you want to delete your remote branch: `git push origin :my-new-branch`
 
-#### 7. (in case you need it) Synchronize with updates from the upstream
+#### 7. (when needed) Synchronize with updates from the upstream
 
-Sometimes you may need to update your fork with the latest changes from the upstream. This may happen when, for example, the main branch was update since you opened your PR and contains conflicts with your changes .
+You may need to update your fork with the latest changes from the upstream in these scenarios:
+- The main branch was updated since you created your PR and there are conflicts
+- You want to incorporate recent changes before starting new work
+- Your PR needs to be rebased on the latest main branch
 
 ```sh
 # 1) Go to the "my-new-branch" branch of your fork ("origin")
@@ -84,7 +94,7 @@ git push
 
 ## PR conventions
 
-> ⚠️ Note: these conventions varies from project to project. Please check the contributing guidelines of the project you want to contribute to.
+> ⚠️ Note: these conventions vary from project to project. Please check the contributing guidelines of the project you want to contribute to.
 
 When submitting a PR, please add one of the following prefixes depending on the topic you are addressing:
 
@@ -102,11 +112,13 @@ In addition:
 - Optionally, include a commit message body, leaving one blank line with the subject line.
 
 ## PR review rules
+
 Projects require the input from one or more reviewers to merge a pull request. For example, one reviewer approves the merge and the other reviewer merges the pull request.
 
 ## Issue guidelines
 
 ### New issue
+
 Discovering an issue is great, here's what you need to do when you discover an issue:
 * Search if the issue has already been created.
 * If yes and open refer to existing issue.
@@ -114,13 +126,37 @@ Discovering an issue is great, here's what you need to do when you discover an i
 * If no, create the issue.
 
 ### Existing issue
+
 * Read comments.
 * Find out if anyone is working on it, if no, offer to do it. If yes, see if you can be of help.
 
 ### Reporting bugs
+
 * Give information about the version and the operating system you are running.
 * Show the steps to reproduce bug.
 * Add error logs.
+
+## Common best practices
+
+### Writing good commits
+
+- **Use descriptive commit messages**: Write clear, concise messages that explain what and why, not just what
+- **Keep commits atomic**: Each commit should represent a single logical change
+- **Use imperative mood**: Start commit messages with verbs like "Add", "Fix", "Update", "Remove"
+- **Reference issues**: Include issue numbers when relevant (e.g., "Fix login bug (#42)")
+
+### Before submitting a PR
+
+- **Test your changes**: Run the project's test suite locally
+- **Check code style**: Follow the project's coding conventions and linting rules
+- **Update documentation**: Add or update docs if your changes affect user-facing functionality
+- **Keep PRs focused**: One PR should address one feature/bug - avoid mixing unrelated changes
+
+### During the review process
+
+- **Ask for clarification**: If feedback is unclear, don't hesitate to ask questions
+- **Make requested changes**: Address all review comments before requesting re-review
+- **Use draft PRs**: Mark PRs as draft if they're work-in-progress to get early feedback
 
 ## References
 

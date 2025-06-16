@@ -7,60 +7,66 @@ Contribute to this repository by adding your name to the list of participants of
 
 ![fork](./media/fork.png)
 
-## 2. Clone the repo to your local environment
+## 2. Clone your forked repo to your local environment
+
 ```sh
-git clone https://github.com/python-sprints/playground-zurich.git
+git clone https://github.com/<your-username>/playground-zurich.git
 cd playground-zurich
 ```
 
-#### 3. Set up the origin and upstream of the your local `project`
+## 3. Set up the origin and upstream of your local project
+
 ```sh
-#  Add the "upstream" to your cloned repository
+# Add the "upstream" to your cloned repository
 git remote add upstream https://github.com/python-sprints/playground-zurich.git
 
 # Set the "origin" url to your cloned repository
 git remote set-url origin https://github.com/<your-username>/playground-zurich.git
 ```
 
-#### 4. Work in a new branch of your origin
+## 4. Work in a new branch of your origin
+
 ```sh
-# 1) Create a new branch (e.g. `add-my-name` from your origin/main branch
+# 1) Create and switch to a new branch (e.g. `add-my-name`) from your origin/main branch
 git branch add-my-name origin/main
 git checkout add-my-name
 
 # 2) Add your name to the list of participants of the event you are attending
 
-# 3) Add the modified files and make a commit (e.g. you changed events/2023-03-28.md)
-git add events/2023-03-28.md
-git commit -m 'added my name'
+# 3) Add the modified files and make a commit (e.g. you changed events/2025-06-16.md)
+# NOTE: Make sure to only commit relevant files!
+git add events/2025-06-16.md
+git commit -m 'Add my name to the list of participants'
 
 # 4) Push to your branch
 git push origin add-my-name
 ```
 
-#### 5. Make a pull request on GitHub
+## 5. Make a pull request on GitHub
+
 * Go to the `add-my-name` of your forked `project` on Github
 * Click `Compare & pull request`
 * Leave a comment
 
 See a [**PR example** here](https://github.com/python-sprints/playground-zurich/pull/2)!
 
-#### 6. Delete branch locally and/or remotely after pull request is merged on GitHub
+## 6. Delete branch locally and/or remotely after pull request is merged on GitHub
+
 * Deleting your local branch from the command line: `git branch -d add-my-name`
-* Additionally if you want to delete your remote branch: `git push origin : add-my-name`
+* Additionally if you want to delete your remote branch: `git push origin :add-my-name`
 
-#### 7. (in case you need it) Synchronize with updates from the upstream
+## 7. (in case you need it) Synchronize with updates from the upstream
 
-Sometimes you may need to update your fork with the latest changes from the upstream. This may happen when, for example, the main branch was update since you opened your PR and contains conflicts with your changes.
+Sometimes you may need to update your fork with the latest changes from the upstream. This may happen when, for example, the main branch was updated since you opened your PR and contains conflicts with your changes.
 
 ```sh
-# 1) Go to the "my-new-branch" branch of your fork ("origin")
+# 1) Go to the "add-my-name" branch of your fork ("origin")
 git checkout add-my-name
 
 # 2) Fetch the commits from the "upstream"
 git fetch upstream
 
-# 3) Merge the changes from the "main" branch of the "upstream" into your the "my-new-branch" branch of your "origin"
+# 3) Merge the changes from the "main" branch of the "upstream" into your "add-my-name" branch of your "origin"
 git merge upstream/main
 
 # 4) Resolve merge conflicts if any and commit your merge
@@ -72,11 +78,12 @@ git push
 
 ## PR review rules
 
-Projects require the approval from one reviewers to merge the pull request.
+The project require the approval from one reviewer to merge the pull request. Please tag @EdAbati to review your PR. 
 
 ## Issue guidelines
 
 ### New issue
+
 Any issue in the documentation? Here's what you need to do when you want to create a new issue:
 * Search if the issue has already been created.
 * If yes and open refer to existing issue.
@@ -84,6 +91,7 @@ Any issue in the documentation? Here's what you need to do when you want to crea
 * If no, create the issue. :)
 
 ### Existing issue
+
 * Read comments.
 * Find out if anyone is working on it, if no, offer to do it. If yes, see if you can be of help.
 
